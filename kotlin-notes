@@ -1,0 +1,87 @@
+Batuhan Apaydın
+@Trendyol
+
+*developer-guy
+
+Project link :
+
+## Why Kotlin ?
+---------------
+4 reason :
+
+- Concise -> Drastically reduce the amount of boilerplate code.
+- Safe -> Avoid enitre classes of errors such as null pointer exceptions.
+- Interoperable -> Leverage existing libraries for the JVM,Android and the browser.
+- Tool-Friendly -> Choose any Java IDE or build from the command line.
+
+
+!!!Kotlin brings together wonderful things from another languages!!!!
+
+- statically typed, but enforce to used type inference a lot  --> causes more readable , short and elegant code.--> var,val str = ""
+- it runs on top of JVM, object oriented language but that includes many ideas from functional programming. --> lambdas,high order functions..
+- built-in immutability support -->   listOf(),setOf(),mapOf() etc.
+- like factory methods on collections --> mutableListOf(),mutableSetOf() etc.
+- properties support --> automatically created getter, setters
+!!! NO SEMICOLON REQUIRED !!! :)
+
+Downloading the compiler
+------------------------
+Homebrew
+-----------
+- brew update
+- brew install kotlin
+
+Check Kotlinc Compiler Installation
+-----------------------------------
+- kotlinc version
+
+Running the REPL (Read-Eval-Print-Loop)
+---------------------------------------
+- kotlinc-jvm
+
+Creating and running first application
+--------------------------------------
+Two option:
+- developing kotlin library
+- developing kotllin application which is self contained and includes Kotlin runtime library in it.*
+
+1 - touch hello.kt
+2 - vim hello.kt
+3 - kotlinc hello.kt --include-runtime -d ~/hello.jar
+
+-include-runtime: makes jar self-contained and runnable by including Kotlin runtime library in it.
+-d: output directory for .jar file.
+
+Using the command line to run scripts
+-------------------------------------
+Kotlin can also be used as a scripting language.
+A script is a Kotlin source file (.kts) with top level executable code.
+
+--------------------------------------------------------------------------------
+Default Imports
+----------------
+A number of packages are imported into every Kotlin file by default:
+
+kotlin.*
+kotlin.annotation.*
+kotlin.collections.*
+kotlin.comparisons.* (since 1.1)
+kotlin.io.*
+kotlin.ranges.*
+kotlin.sequences.*
+kotlin.text.*
+
+
+Agenda
+-------------
+Variables --> val, var
+Idioms --> string interpolation, casting, with, typealias
+Null safety --> ?, ?., let, !!, ?:,
+Control flow --> if expression, when, for
+Classes and Inheritance --> class, data class, companion, interface
+Extension Functions
+Generics --> in , out , star projection
+Enums
+Functions --> named, vararg , inline , infix
+Lambdas
+
