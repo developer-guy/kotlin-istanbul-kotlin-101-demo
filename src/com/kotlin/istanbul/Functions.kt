@@ -42,5 +42,7 @@ fun main(args: Array<String>) {
 
     println(sum(1, 2, 3, 4))
 
+    println(sum(*numbers))
+
     println("123" asRepresent 123)
 }

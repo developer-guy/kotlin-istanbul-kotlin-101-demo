@@ -1,7 +1,7 @@
 package com.kotlin.istanbul
 
 fun main(args: Array<String>) {
-    // read only variable
+    // read only variable declaration
     val readOnlyVariable: String = "Batuhan" // immediate assignment
 
     val readOnlyVariableWithTypeInferred = "Batuhan" // String type inferred

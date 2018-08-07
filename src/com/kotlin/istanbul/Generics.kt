@@ -12,6 +12,8 @@ fun main(args: Array<String>) {
 
     val numbers = mutableListOf(1, 2, 4, 3)
 
+    val isBiggerThanThree = fun(i: Int): Boolean = i > 3
+
     filter(numbers) { it > 3 }
         .forEach(::println)
 

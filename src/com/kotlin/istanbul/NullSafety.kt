@@ -15,7 +15,5 @@ fun main(args: Array<String>) {
         item?.let { println(it) }  // make item nullable
     }
 
-    println(parse("xxx") ?: "Not parsable value")
+    println("xxx".toIntOrNull() ?: "Not parsable value")
 }
-
-fun parse(s: String): Int? = s.toIntOrNull()

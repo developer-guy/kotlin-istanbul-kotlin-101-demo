@@ -33,6 +33,6 @@ fun main(args: Array<String>) {
 }
 
 fun fetchDataFromService(): List<Int> {
-    println("Fetching data")
+    println("Fetching data from service")
     return listOf(1, 2, 3, 4)
 }

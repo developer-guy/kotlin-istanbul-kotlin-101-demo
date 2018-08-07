@@ -1,11 +1,8 @@
 package com.kotlin.istanbul
 
 
-open class Human(
-    val firstName: String,
-    val lastName: String,
-    val age: Int
-) {
+// primary constructor
+open class Human constructor(val firstName: String, val lastName: String, val age: Int) {
 
     init {
         println("Initializing Human!")
@@ -17,7 +14,7 @@ interface ValidationCase {
     fun isLicenceValid(): String
 }
 
-class Person(firstName: String, lastName: String, age: Int) :
+class Person constructor(firstName: String, lastName: String, age: Int) :
     Human(firstName, lastName, age),
     ValidationCase {
 
@@ -25,7 +22,12 @@ class Person(firstName: String, lastName: String, age: Int) :
         println("Initializing Person!")
     }
 
+    // secondary consturctor
     constructor(fullName: Array<String>, age: Int) : this(fullName[0], fullName[1], age)
+
+    companion object {
+        fun of(firstName: String, lastName: String, age: Int): Person = Person(firstName, lastName, age)
+    }
 
     override fun isLicenceValid(): String = if (this.age > 20) "valid" else "not valid"
 
@@ -40,9 +42,6 @@ class Person(firstName: String, lastName: String, age: Int) :
         )
     }
 
-    companion object {
-        fun of(firstName: String, lastName: String, age: Int): Person = Person(firstName, lastName, age)
-    }
 }
 
 const val EMAIL_REGEX = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"

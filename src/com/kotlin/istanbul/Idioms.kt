@@ -1,6 +1,7 @@
 package com.kotlin.istanbul
 
 
+// type safe builders
 class Robot {
     fun turnLeft(): Unit {
         println("Turning leff")
@@ -24,17 +25,16 @@ fun main(args: Array<String>) {
     println("The sum of 1 and 2 : ${1 + 2}")
 
 
-    listOf(1, 2, 3, 4)
-        .map(::doubleIt)
-        .forEach(::println)
-
     val canBeAnyType: Any = "a sample String"
 
-
-    when (canBeAnyType) {
+    when (canBeAnyType) { // instance type check and smart casting
         is String -> println("This is string and length is : ${canBeAnyType.length}")
         is Int -> println("This is Int and is bigger than 10 : ${canBeAnyType.compareTo(10)}")
     }
+
+    listOf<Any>(1, 2, 3, 4)
+        .map { it as Int * 2 } // type casting
+        .forEach(::println)
 
 
     with(Robot()) {
@@ -43,5 +43,3 @@ fun main(args: Array<String>) {
     }
 
 }
-
-fun doubleIt(item: Any): Int = item as Int * 2

@@ -5,10 +5,9 @@ fun main(args: Array<String>) {
     val a = 100
     val b = 150
 
-    var max: Int
+    val max: Int
 
-    // as expression
-
+    //if as expression
     max = if (a > b) a else b
 
     println("Max value result between $a and $b is : $max")
