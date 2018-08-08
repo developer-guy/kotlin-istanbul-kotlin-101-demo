@@ -46,10 +46,6 @@ class Person constructor(firstName: String, lastName: String, age: Int) :
 
 const val EMAIL_REGEX = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$"
 
-fun isEmailValid(email: String): Boolean {
-    return EMAIL_REGEX.toRegex().matches(email)
-}
-
 data class User(val userName: String, val password: String) {
     var email: String = ""
         set(value) {
@@ -58,6 +54,9 @@ data class User(val userName: String, val password: String) {
         get() = field
 }
 
+fun isEmailValid(email: String): Boolean {
+    return EMAIL_REGEX.toRegex().matches(email)
+}
 
 fun main(args: Array<String>) {
     val person = Person("Batuhan.Apaydın".split(".").toTypedArray(), 24)
@@ -72,7 +71,7 @@ fun main(args: Array<String>) {
 
     println("Username: ${user.userName} and password: ${user.password} and email : ${user.email}")
 
-    val (userName, password) = User("bapaydin", "123456") // De-structring declarations
+    val (userName, password) = User("bapaydin", "123456") // destructuring declarations
 
     println("Username: $userName and password: $password")
 }

@@ -21,15 +21,14 @@ val <T> MutableList<T>.lastItem: T get() = this[this.size - 1]
 
 fun main(args: Array<String>) {
     val numbers = mutableListOf(1, 2, 3, 4)
+
     numbers.addIf(5) { it > 10 }
 
-    numbers.forEach(::println)
+    println(numbers.none { it == 5 })
 
     val elementsWithoutNull = mutableListOf(1, 2, 3, null)
         .clearNullItems()
 
     println(elementsWithoutNull.lastItem)
-
-    elementsWithoutNull.forEach(::println)
 
 }

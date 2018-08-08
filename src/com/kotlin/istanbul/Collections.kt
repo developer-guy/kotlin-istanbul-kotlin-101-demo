@@ -9,7 +9,6 @@ fun main(args: Array<String>) {
     mutableNumbers.forEach(::println)
 
     // immutable collections
-
     val immutableNumbers = listOf(1, 2, 3, 4)
 
     immutableNumbers

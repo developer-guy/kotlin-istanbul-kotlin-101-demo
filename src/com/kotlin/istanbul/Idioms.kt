@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
 
     // string interpolation
 
-    val sampleString = "Batuhan"
+    val sampleString = "a simple string"
 
     println("The str is $sampleString")
     println("The str is ${sampleString.length} characters")
@@ -25,7 +25,7 @@ fun main(args: Array<String>) {
     println("The sum of 1 and 2 : ${1 + 2}")
 
 
-    val canBeAnyType: Any = "a sample String"
+    val canBeAnyType: Any = 170
 
     when (canBeAnyType) { // instance type check and smart casting
         is String -> println("This is string and length is : ${canBeAnyType.length}")

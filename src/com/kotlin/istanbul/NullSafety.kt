@@ -1,7 +1,7 @@
 package com.kotlin.istanbul
 
 fun main(args: Array<String>) {
-    var name: String? = "Batuhan"
+    var name: String? = "can be null"
 
     name = null
 
@@ -11,9 +11,8 @@ fun main(args: Array<String>) {
 
     val listWithNullValues = listOf("Kotlin", null)
 
-    for (item in listWithNullValues) {
-        item?.let { println(it) }  // make item nullable
-    }
+    listWithNullValues
+        .forEach { it?.let { println(it) } }
 
     println("xxx".toIntOrNull() ?: "Not parsable value")
 }

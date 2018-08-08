@@ -12,7 +12,6 @@ fun main(args: Array<String>) {
 
     println("Max value result between $a and $b is : $max")
 
-
     //when
 
     // value check
@@ -46,16 +45,8 @@ fun main(args: Array<String>) {
         println("Number $number")
     }
 
-
-    for (i in 1..10 step 2) {
-        println(i)
-    }
-
-    for (i in 10 downTo 0 step 3) {
-        println(i)
-    }
-
     println("----------------------------")
+
 
     for (index in numbers.indices) {
         println("At $index value ${numbers[index]}")
@@ -67,5 +58,15 @@ fun main(args: Array<String>) {
     for ((index, value) in numbers.withIndex()) {
         println("At $index value $value")
     }
+
+
+    for (i in 1..10 step 2) {
+        println(i)
+    }
+
+    for (i in 10 downTo 0 step 3) {
+        println(i)
+    }
+
 
 }

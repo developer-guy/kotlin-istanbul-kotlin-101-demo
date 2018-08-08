@@ -20,16 +20,15 @@ fun main(args: Array<String>) {
     val sum4: Int.(Int) -> Int = { other: Int -> this.plus(other) }
 
 
-    html {
+    println(html {
         this.body()
         return@html head()
-    }
+    })
 }
 
-fun html(init: HTML.() -> String): HTML {
+fun html(init: HTML.() -> String): String {
     val html = HTML()
-    html.init()
-    return html
+    return html.init()
 }
 
 class HTML {
@@ -41,6 +40,7 @@ class HTML {
 }
 
 inline fun <T, reified R : Any> doSomeWorkOnArray(items: Array<T>, work: (T) -> R): Array<R?> {
+    val t: T
     val copy = arrayOfNulls<R>(items.size)
 
     for ((index, value) in items.withIndex()) {
